@@ -3,7 +3,7 @@ GET http://localhost:3333
 
 
 
-
+GET http://localhost:3333/irTomarAgua
 
 
 # GET http://localhost:3333/artigos
