@@ -1,9 +1,15 @@
 GET http://localhost:3333
 
+###
 
+POST  http://localhost:3333/users
+Content-Type: application/json
 
-
-GET http://localhost:3333/irTomarAgua
+{
+    "name": "rojerio",
+    "senha": "123",
+    "perfil": "ADM"
+}
 
 
 # GET http://localhost:3333/artigos

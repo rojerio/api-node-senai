@@ -1,21 +1,14 @@
 import { fastify } from 'fastify'
-import {Database} from './banco-de-dados.js';
+import { DatabaseUsers } from './database.js'
 
 const server = fastify();
-const database = new Database;
+const database = new DatabaseUsers;
 
-server.post('/artigos', (request, reply) => {
-
-  await database.create({
-    nome: '',
-    descicao: '',
-    conteudo: '',
-    imagem: '',
-    github: ''
-  })
-
-  return reply.status(201).send;
-});
+server.post('/users', async (request, reply) => {
+  const body = request.body;
+  await database.createUser(body);
+  return 201
+})
 
 server.get('/', () => {
   return 'Brunna';
